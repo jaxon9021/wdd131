@@ -1,0 +1,51 @@
+h1,h2 {
+    text-align: center;
+    line-height: 1.5;
+    text-transform: capitalize;
+    font: 1em serif;
+}
+
+h2 { 
+    text-decoration: underline;
+    color:#006EB6;
+    letter-spacing: 2px;
+    font-size: 15px;
+}
+h1 {
+    margin-top: 75px;
+    letter-spacing: 3px;
+    font-size: 40px;
+}
+
+.does-list {
+    text-align: left;
+    max-width: 475px;
+    
+}
+
+li{ 
+    padding-top: 20px;
+}
+
+main {
+    padding: 10px;
+    text-align: left;
+    margin-left: 125px;
+    max-width: 475px;
+    font: 3em;
+}
+
+
+
+footer {
+}
+img {
+    height: 150px;
+    width: 150px;
+    margin-left: 300px;
+}
+
+.content {
+    border: 1px solid black;
+    margin: 50px;
+}
