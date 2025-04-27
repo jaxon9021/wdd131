@@ -30,7 +30,7 @@ li{
 main {
     padding: 10px;
     text-align: left;
-    margin-left: 125px;
+    margin-left: 300px;
     max-width: 475px;
     font: 3em;
 }
@@ -42,10 +42,12 @@ footer {
 img {
     height: 150px;
     width: 150px;
-    margin-left: 300px;
+    margin-left: 475px;
 }
 
 .content {
     border: 1px solid black;
-    margin: 50px;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 50px;
 }
