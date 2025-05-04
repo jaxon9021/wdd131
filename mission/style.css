@@ -35,10 +35,6 @@ main {
     font: 3em;
 }
 
-
-
-footer {
-}
 img {
     height: 150px;
     width: 150px;
@@ -50,4 +46,13 @@ img {
     margin-left: 200px;
     margin-right: 200px;
     margin-top: 50px;
+}
+
+.dark { 
+    background-color: #333;
+    color: white;
+}
+
+.dark h2 {
+    color: rgb(160, 212, 237);
 }
