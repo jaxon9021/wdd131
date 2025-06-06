@@ -10,7 +10,7 @@ body {
 header {
   text-align: center;
   padding: 1rem 0;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #f7d9a8;
   position: relative;
 }
 
@@ -54,7 +54,7 @@ nav a {
   display: grid;
   grid-template-columns: 100px 1fr;
   gap: 1.5rem;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #f7d9a8;
   padding-bottom: 1rem;
 }
 
@@ -94,7 +94,46 @@ nav a {
 
 /* Sidebar */
 .sidebar {
-  border-left: 1px solid #ccc;
+  border-left: 1px solid #f7d9a8;
   padding-left: 1rem;
   font-size: 0.95rem;
 }
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  padding: 0 1rem;
+  position: relative;
+}
+
+.header-container h1 {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 2rem;
+  font-family: Georgia, serif;
+  color: #3a2c2c;
+  margin: 0.5rem 0 0.2rem;
+}
+
+.nav-box {
+  border: 1px solid #f7d9a8;
+  padding: 0.3rem 0.8rem;
+  background-color: #fffdf8;
+  justify-self: end;
+  margin-top: 0.5rem;
+}
+
+.nav-box nav a {
+  margin-left: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: #800000;
+}
+
+.nav-box nav a:first-child {
+  margin-left: 0;
+}
+
