@@ -1,0 +1,100 @@
+/* Basic Page Setup */
+body {
+  font-family: Georgia, serif;
+  margin: 0;
+  background-color: #fffdf8;
+  color: #2d2d2d;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+nav {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+}
+
+nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: #800000;
+  font-weight: bold;
+}
+
+/* Main Grid Layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Book Review Section */
+.reviews {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Nested Grid for Each Review */
+.book-review {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 1.5rem;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1rem;
+}
+
+.left-meta {
+  text-align: right;
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+.center-content {
+  text-align: center;
+}
+
+.center-content h2 {
+  color: #800000;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.center-content img {
+  max-width: 150px;
+  margin: 0.5rem auto;
+  display: block;
+}
+
+.center-content p {
+  text-align: left;
+  line-height: 1.5;
+}
+
+.center-content a {
+  color: #800000;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Sidebar */
+.sidebar {
+  border-left: 1px solid #ccc;
+  padding-left: 1rem;
+  font-size: 0.95rem;
+}
