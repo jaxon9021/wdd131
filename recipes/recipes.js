@@ -279,3 +279,94 @@ const recipes = [
 		rating: 4
 	}
 ]
+const recipeList = document.querySelector('#recipes');
+const template = document.querySelector('#recipe-card');
+
+// Loop through all recipes and render them
+recipes.forEach(recipe => {
+  const clone = template.content.cloneNode(true);
+
+  // Image
+  const img = clone.querySelector('img');
+  img.src = recipe.image;
+  img.alt = recipe.name;
+
+  // Recipe Title
+  clone.querySelector('h2').textContent = recipe.name;
+
+  // Description
+  clone.querySelector('.recipe-description').textContent = recipe.description;
+
+  // Tags
+  const tagContainer = clone.querySelector('.recipe-tags');
+  recipe.tags.forEach(tag => {
+    const tagEl = document.createElement('span');
+    tagEl.classList.add('tag');
+    tagEl.textContent = tag;
+    tagContainer.appendChild(tagEl);
+  });
+
+  // Rating (★ symbols)
+  const rating = clone.querySelector('.recipe-rating');
+  rating.textContent = '⭐'.repeat(recipe.rating);
+
+  // Finally, append the clone
+  recipeList.appendChild(clone);
+});
+
+document.querySelector('.search-bar button').addEventListener('click', searchHandler);
+
+function searchHandler(e) {
+	e.preventDefault();
+  
+	const query = document.querySelector('.search-bar input').value.toLowerCase();
+  
+	const filteredRecipes = filterRecipes(query);
+  
+	// Clear existing recipes
+	document.querySelector('#recipes').innerHTML = '';
+  
+	// Render filtered results
+	renderRecipes(filteredRecipes);
+  }
+
+  function filterRecipes(query) {
+	return recipes
+	  .filter(recipe => {
+		return (
+		  recipe.name.toLowerCase().includes(query) ||
+		  recipe.description.toLowerCase().includes(query) ||
+		  recipe.tags.find(tag => tag.toLowerCase().includes(query)) ||
+		  recipe.recipeIngredient.find(ing => ing.toLowerCase().includes(query))
+		);
+	  })
+	  .sort((a, b) => a.name.localeCompare(b.name)); // Sort alphabetically
+  }
+  function renderRecipes(recipeArray) {
+	const container = document.querySelector('#recipes');
+	const template = document.querySelector('#recipe-card');
+  
+	recipeArray.forEach(recipe => {
+	  const clone = template.content.cloneNode(true);
+  
+	  clone.querySelector('img').src = recipe.image;
+	  clone.querySelector('img').alt = recipe.name;
+	  clone.querySelector('h2').textContent = recipe.name;
+	  clone.querySelector('.recipe-description').textContent = recipe.description;
+  
+	  const tagContainer = clone.querySelector('.recipe-tags');
+	  recipe.tags.forEach(tag => {
+		const tagEl = document.createElement('span');
+		tagEl.classList.add('tag');
+		tagEl.textContent = tag;
+		tagContainer.appendChild(tagEl);
+	  });
+  
+	  const rating = clone.querySelector('.recipe-rating');
+	  rating.textContent = '★'.repeat(recipe.rating);
+  
+	  container.appendChild(clone);
+	});
+  }
+	
+  
