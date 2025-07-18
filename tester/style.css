@@ -1,0 +1,43 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #111;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+  }
+  
+  .album-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 90%;
+    max-width: 600px;
+  }
+  
+  .album-display {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #album-cover {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  }
+  
+  button#prev,
+  button#next {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Spotify Album Carousel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="album-container">
+    <button id="prev">&#8592;</button>
+
+    <div class="album-display">
+      <img id="album-cover" src="" alt="Album Cover">
+      <iframe
+        id="spotify-player"
+        src=""
+        width="100%"
+        height="352"
+        style="border-radius:12px"
+        frameborder="0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+    </div>
+
+    <button id="next">&#8594;</button>
+  </div>
+
+  <script src="tester.js"></script>
+</body>
+</html>
