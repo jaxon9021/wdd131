@@ -80,6 +80,7 @@ function displayAlbums(filteredAlbums) {
       
       <iframe
         src="${album.spotifyUrl}"
+        title="This is a selected album of the many loaded in, for more information on songs and artists play the album"
         width="100%"
         height="450px"
         style="border-radius:12px"
