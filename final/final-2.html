@@ -16,31 +16,38 @@
             <p class="hero-txt">Albums</p>
             <nav class="links">
                 <a href="final.html">SCROLL</a>
-                <a href="final-2.html">RANDOMIZE</a>
+                <a href="final-2.html">FILTER</a>
             </nav>
         </div>
     </header>
 
-    <main>
-        <p id="title"></p>
-        <div class="album-container">
-            <div class="album-display">
-            <iframe
-                title="This is an album that is being shown for the user, there are also songs underneath that you can click and play"
-                id="spotify-player"
-                src=""
-                width="100%"
-                height="450px"
-                style="border-radius:12px"
-                frameborder="0"
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy">
-              </iframe>
-            </div>
-        
-            
+    <main id="main2">
+        <div class="controls">
+            <select id="genre-select">
+              <option value="filter">Filter</option>
+              <option value="Art Rock"> Art Rock</option>
+              <option value="Post Rock">Post Rock</option>
+              <option value="Experimental Pop">Experimental Pop</option>
+              <option value="Experimental Hip Hop">Experimental Hip Hop</option>
+              <option value="Ambient">Ambient</option>
+              <option value="Indie Rock">Indie Rock</option>
+              <option value="Emo">Emo</option>
+              <option value="Cloud Rap">Cloud Rap</option>
+              <option value="Alternative R&B"> Alternative R&B</option>
+              <option value="Synthpop">Synthpop</option>
+              <option value="Avant-Garde Jazz">Avant-Garde Jazz</option>
+              <option value="Art Pop">Art Pop</option>
+              <option value="Pop Punk">Pop Punk</option>
+              <option value="Alternative Rock">Alternative Rock</option>
+              <option value="Alt-Country">Alt-Country</option>
+              <option value="Hip Hop">Hip Hop</option>
+              <option value="Experimental">Experimental</option>
+              <option value="Americana">Americana</option>  
+            </select>
           </div>
-          <button id="random">Random</button>
+          
+          <div id="album-grid" class="album-grid"></div>
+          
     </main>
 
     <footer>

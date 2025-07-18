@@ -78,6 +78,9 @@ body {
     position: relative; /* <-- important for layering */
     z-index: 1;
     overflow: hidden;
+    
+   
+    
 }
 
 
@@ -105,6 +108,7 @@ body {
     font-family: var(--paragraph-font);
     text-align: center;
     opacity: .5;
+    
 }
 
 nav a {
@@ -139,6 +143,14 @@ main {
     background-color: #B5B5B5;
     border-top: solid #000000 2px;
   
+}
+
+#main2 {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(26, 150px);    
+  background-color: #B5B5B5;
+  border-top: solid #000000 2px;
 }
 
 button#prev {
@@ -224,9 +236,73 @@ button#prev {
     transform: scale(1.025);
     opacity: .6;
   }
+
+  .album-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 400px); /* ✅ Two columns */
+    gap:10rem;
+    row-gap: 5rem;
+    padding: 2rem;
+    grid-column: 4/5;
+  }
+  
+  
+  .album-card {
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+    opacity: 0.95;
+    height: 100%;
+  }
+  
+  .album-card h3 {
+    font-size: .8rem;
+    margin: 0.5rem 0;
+    font-family: var(--heading-font);
+    color: var(--accent2-color);
+  }
+  
+  .album-card iframe {
+    width: 100%;
+    height: 100%px;
+    border-radius: 12px;
+  }
+
+  .controls {
+    text-align: center;
+    margin: 6rem 0;
+    grid-column: 4/5;
+  }
+  
+  #genre-select {
+    font-family: var(--paragraph-font);
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: #B5B5B5;
+    border: solid #838383 2px;
+    border-radius: 2em;
+    padding-left: s
+     }
+  
+  #genre-select:hover {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  #genre-select:focus {
+    outline: none;
+    border-color: #838383;
+  }
+  
+  
   
   /* Small devices (phones) */
 @media screen and (max-width: 768px) {
+
+  .album-grid {
+    grid-template-columns: 1fr; /* Stack on mobile */
+  }
+
     #hero {
       grid-template-rows: auto auto auto auto;
       grid-template-columns: 1fr;

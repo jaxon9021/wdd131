@@ -70,6 +70,15 @@ const albums = [
     currentIndex = (currentIndex + 1) % albums.length;
     updateAlbum();
   });
+
+  document.getElementById('random').addEventListener('click', () => {
+    let newIndex;
+    do {
+      newIndex = Math.floor(Math.random() * albums.length);
+    } while (newIndex === currentIndex); // avoid repeating the same album
+    currentIndex = newIndex;
+    updateAlbum();
+  });
   
   // Initialize
   updateAlbum();
