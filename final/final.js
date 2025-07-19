@@ -79,6 +79,10 @@ const albums = [
     currentIndex = newIndex;
     updateAlbum();
   });
+
+  
   
   // Initialize
   updateAlbum();
+
+  
