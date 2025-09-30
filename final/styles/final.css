@@ -148,7 +148,7 @@ main {
 #main2 {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(26, 150px);    
+  grid-template-rows: auto;    
   background-color: #B5B5B5;
   border-top: solid #000000 2px;
 }
